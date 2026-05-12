@@ -1,9 +1,507 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-  <title>Teewars legacy official site</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Teewars Legacy - Oldschool Online Deathmatch</title>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      background: #4b9bd0 url("assets/background.png") repeat;
+      color: #1b2730;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    a {
+      color: #174f8a;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #b04216;
+    }
+
+    #page {
+      width: 780px;
+      margin: 14px auto;
+      background: #d8efff;
+      border: 2px solid #173b55;
+    }
+
+    #topbar {
+      background: #122d43;
+      color: #ffffff;
+      padding: 4px 8px;
+      border-bottom: 1px solid #ffffff;
+      font-size: 10px;
+    }
+
+    #banner {
+      background: #7db8dc;
+      padding: 12px;
+      border-top: 1px solid #5a98bf;
+      border-bottom: 2px solid #173b55;
+    }
+
+    #banner table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    #banner-image {
+      width: 120px;
+      height: 90px;
+      border: 2px solid #173b55;
+      background: #ffffff;
+    }
+
+    #site-title {
+      margin: 0;
+      padding: 0 0 4px 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 34px;
+      line-height: 1;
+      color: #ffffff;
+    }
+
+    #tagline {
+      padding-left: 16px;
+      color: #16374f;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    #nav {
+      background: #244f6d;
+      border-top: 1px solid #ffffff;
+      border-bottom: 2px solid #173b55;
+      padding: 5px;
+      text-align: center;
+    }
+
+    #nav a {
+      margin: 0 3px;
+      padding: 4px 12px;
+      background: #dcefff;
+      border-top: 2px solid #ffffff;
+      border-left: 2px solid #ffffff;
+      border-right: 2px solid #173b55;
+      border-bottom: 2px solid #173b55;
+      color: #173b55;
+      text-decoration: none;
+      font-size: 11px;
+    }
+
+    #content {
+      padding: 10px;
+    }
+
+    .panel {
+      margin-bottom: 10px;
+      background: #f4fbff;
+      border-top: 2px solid #ffffff;
+      border-left: 2px solid #ffffff;
+      border-right: 2px solid #7c9ab0;
+      border-bottom: 2px solid #7c9ab0;
+    }
+
+    .panel-title {
+      margin: 0;
+      padding: 5px 8px;
+      background: #315f80;
+      color: #ffffff;
+      font-size: 13px;
+      border-bottom: 1px solid #173b55;
+    }
+
+    .panel-body {
+      padding: 9px;
+    }
+
+    .news-title {
+      margin: 0 0 6px 0;
+      font-size: 18px;
+      color: #b04216;
+    }
+
+    .status {
+      padding: 2px 5px;
+      background: #ffe599;
+      border: 1px solid #9d7d24;
+      color: #5a3100;
+      font-weight: bold;
+      font-size: 10px;
+    }
+
+    .button-row {
+      margin-top: 10px;
+    }
+
+    .big-button {
+      margin-right: 6px;
+      padding: 6px 12px;
+      background: #ffd36a;
+      border-top: 2px solid #ffffff;
+      border-left: 2px solid #ffffff;
+      border-right: 2px solid #9a6a00;
+      border-bottom: 2px solid #9a6a00;
+      color: #4d2b00;
+      text-decoration: none;
+    }
+
+    .columns {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .columns td {
+      vertical-align: top;
+      padding: 0;
+    }
+
+    .left-column {
+      width: 500px;
+      padding-right: 10px !important;
+    }
+
+    .right-column {
+      width: 250px;
+    }
+
+    .feature-list {
+      margin: 6px 0 0 18px;
+      padding: 0;
+    }
+
+    .feature-list li {
+      margin-bottom: 4px;
+    }
+
+    .screens {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .screens td {
+      width: 33%;
+      padding: 4px;
+      text-align: center;
+      vertical-align: top;
+      font-size: 10px;
+      color: #315f80;
+    }
+
+    .screens img {
+      width: 225px;
+      border: 2px solid #173b55;
+      background: #ffffff;
+      padding: 2px;
+    }
+
+    .control-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+    }
+
+    .control-table th,
+    .control-table td {
+      padding: 5px;
+      border: 1px solid #9cb8cc;
+      text-align: left;
+    }
+
+    .control-table th {
+      background: #d0e9fa;
+      color: #173b55;
+    }
+
+    .roadmap-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    .roadmap-list li {
+      margin-bottom: 6px;
+      padding: 6px;
+      background: #ffffff;
+      border: 1px solid #9cb8cc;
+    }
+
+    .roadmap-meta {
+      display: block;
+      margin-top: 3px;
+      color: #586f80;
+      font-size: 10px;
+    }
+
+    .footer {
+      padding: 8px;
+      background: #122d43;
+      color: #d8efff;
+      text-align: center;
+      font-size: 10px;
+      border-top: 2px solid #173b55;
+    }
+
+    .footer a {
+      color: #ffffff;
+    }
+  </style>
 </head>
 <body>
-<h1>Site of TWL now testing</h1>
+  <div id="page">
+    <div id="topbar">Teewars Legacy official site :: free oldschool online deathmatch :: project status: INDEV</div>
+
+    <div id="banner">
+      <table>
+        <tr>
+          <td><img id="banner-image" src="assets/banner.png" alt="Teewars Legacy banner"></td>
+          <td>
+            <h1 id="site-title">Teewars Legacy</h1>
+            <div id="tagline">Small tees, big maps, classic 2000s open source style.</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#controls">Controls</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="https://github.com/zabidenhtf/Teewars-Legacy">GitHub</a>
+    </div>
+
+    <div id="content">
+      <div class="panel" id="home">
+        <h2 class="panel-title">Welcome</h2>
+        <div class="panel-body">
+          <h3 class="news-title">Teewars Legacy <span class="status">INDEV</span></h3>
+          <p>Teewars Legacy is a free online deathmatch game inspired by Teeworlds and built with an oldschool 2000s open source spirit. Control a small tee, move fast, hook around maps, shoot rivals, and chase a bigger score.</p>
+          <p>The project focuses on a classic source layout, pixelated graphics, simple rules, and a clear arcade feel.</p>
+          <div class="button-row">
+            <a class="big-button" href="https://github.com/zabidenhtf/Teewars-Legacy/releases">Download</a>
+            <a class="big-button" href="https://github.com/zabidenhtf/Teewars-Legacy">View Source</a>
+          </div>
+        </div>
+      </div>
+
+      <table class="columns">
+        <tr>
+          <td class="left-column">
+            <div class="panel" id="about">
+              <h2 class="panel-title">About The Game</h2>
+              <div class="panel-body">
+                <p>Teewars Legacy is an online deathmatch game licensed under the zlib license. You can download it, play indefinitely, and follow the source as it changes.</p>
+                <ul class="feature-list">
+                  <li>Oldschool source structure like 2000s games.</li>
+                  <li>Oldschool pixelated graphics.</li>
+                  <li>Two excellent maps in the current INDEV build.</li>
+                  <li>Clear looking graphics and classic arcade controls.</li>
+                </ul>
+              </div>
+            </div>
+          </td>
+          <td class="right-column">
+            <div class="panel">
+              <h2 class="panel-title">Project Box</h2>
+              <div class="panel-body">
+                <p><b>Status:</b> INDEV</p>
+                <p><b>License:</b> zlib</p>
+                <p><b>Genre:</b> Online deathmatch</p>
+                <p><b>Repository:</b><br><a href="https://github.com/zabidenhtf/Teewars-Legacy">zabidenhtf/Teewars-Legacy</a></p>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div class="panel" id="screenshots">
+        <h2 class="panel-title">Screenshots</h2>
+        <div class="panel-body">
+          <table class="screens">
+            <tr>
+              <td><img src="assets/title-screen.png" alt="Teewars Legacy title screen"><br>Title screen</td>
+              <td><img src="assets/dm1-indev.png" alt="Teewars Legacy DM1 in development"><br>DM1 in development</td>
+              <td><img src="assets/testing-tees.png" alt="Teewars Legacy testing tees"><br>Testing tees</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel" id="controls">
+        <h2 class="panel-title">Controls</h2>
+        <div class="panel-body">
+          <table class="control-table">
+            <tr><th>Action</th><th>Control</th></tr>
+            <tr><td>Move left</td><td>A or Arrow Left</td></tr>
+            <tr><td>Move right</td><td>D or Arrow Right</td></tr>
+            <tr><td>Jump</td><td>Space or W</td></tr>
+            <tr><td>Shoot</td><td>Left Mouse Button</td></tr>
+            <tr><td>Hook</td><td>Right Mouse Button</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel" id="roadmap">
+        <h2 class="panel-title">Project Roadmap</h2>
+        <div class="panel-body">
+          <ul class="roadmap-list" id="roadmap-items">
+            <li>Loading project roadmap...</li>
+          </ul>
+          <noscript>
+            <p>JavaScript is disabled. Visit the <a href="https://github.com/zabidenhtf/Teewars-Legacy/issues">GitHub issues page</a> to view the project roadmap.</p>
+          </noscript>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Copyright &copy; 2007 Magnus Auvinen. Copyright &copy; 2026 Mykyta Polishyk.
+      Site for <a href="https://github.com/zabidenhtf/Teewars-Legacy">Teewars Legacy</a>.
+    </div>
+  </div>
+  <script type="text/javascript">
+  (function () {
+    var list = document.getElementById("roadmap-items");
+    var apiUrl = "https://api.github.com/repos/zabidenhtf/Teewars-Legacy/issues?state=open&sort=updated&direction=desc&per_page=5";
+    var issuesUrl = "https://github.com/zabidenhtf/Teewars-Legacy/issues";
+
+    function clearList() {
+      while (list.firstChild) {
+        list.removeChild(list.firstChild);
+      }
+    }
+
+    function addText(parent, text) {
+      parent.appendChild(document.createTextNode(text));
+    }
+
+    function showFallback(message) {
+      var item;
+      var link;
+
+      clearList();
+      item = document.createElement("li");
+      addText(item, message + " ");
+      link = document.createElement("a");
+      link.href = issuesUrl;
+      addText(link, "View roadmap on GitHub.");
+      item.appendChild(link);
+      list.appendChild(item);
+    }
+
+    function renderIssues(items) {
+      var shown = 0;
+      var i;
+      var issue;
+      var item;
+      var link;
+      var meta;
+      var labels;
+      var j;
+
+      clearList();
+
+      for (i = 0; i < items.length && shown < 5; i += 1) {
+        issue = items[i];
+
+        if (issue.pull_request) {
+          continue;
+        }
+
+        item = document.createElement("li");
+
+        link = document.createElement("a");
+        link.href = issue.html_url;
+        addText(link, "#" + issue.number + " " + issue.title);
+        item.appendChild(link);
+
+        labels = "";
+        if (issue.labels && issue.labels.length) {
+          for (j = 0; j < issue.labels.length; j += 1) {
+            if (j > 0) {
+              labels += ", ";
+            }
+            labels += issue.labels[j].name;
+          }
+        }
+
+        meta = document.createElement("span");
+        meta.className = "roadmap-meta";
+        addText(meta, "Updated " + issue.updated_at.substring(0, 10) + (labels ? " :: " + labels : ""));
+        item.appendChild(meta);
+
+        list.appendChild(item);
+        shown += 1;
+      }
+
+      if (shown === 0) {
+        item = document.createElement("li");
+        addText(item, "No open roadmap items right now.");
+        list.appendChild(item);
+      }
+    }
+
+    function parseJson(text) {
+      if (!text || text.charAt(0) !== "[") {
+        return null;
+      }
+      return eval("(" + text + ")");
+    }
+
+    function loadRoadmap() {
+      var xhr;
+      var data;
+
+      if (!list) {
+        return;
+      }
+
+      if (typeof XMLHttpRequest === "undefined") {
+        showFallback("Project roadmap could not be loaded.");
+        return;
+      }
+
+      xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState !== 4) {
+          return;
+        }
+
+        if (xhr.status < 200 || xhr.status >= 300) {
+          showFallback("Project roadmap could not be loaded.");
+          return;
+        }
+
+        try {
+          data = parseJson(xhr.responseText);
+          if (!data) {
+            showFallback("Project roadmap could not be read.");
+            return;
+          }
+          renderIssues(data);
+        } catch (error) {
+          showFallback("Project roadmap could not be read.");
+        }
+      };
+
+      try {
+        xhr.open("GET", apiUrl, true);
+        xhr.send(null);
+      } catch (error) {
+        showFallback("Project roadmap could not be loaded.");
+      }
+    }
+
+    loadRoadmap();
+  }());
+  </script>
 </body>
 </html>
