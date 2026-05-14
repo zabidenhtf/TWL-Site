@@ -21,12 +21,12 @@ a:hover {
 #page {
   width: 780px;
   margin: 14px auto;
-  background: #d8efff;
-  border: 2px solid #173b55;
+  background: #bdd2bb;
+  border: 2px solid #2d5517;
 }
 
 #topbar {
-  background: #122d43;
+  background: #284312;
   color: #ffffff;
   padding: 4px 8px;
   border-bottom: 1px solid #ffffff;
@@ -35,10 +35,10 @@ a:hover {
 }
 
 #banner {
-  background: #7db8dc;
+  background: #748d5f;
   padding: 12px;
-  border-top: 1px solid #5a98bf;
-  border-bottom: 2px solid #173b55;
+  border-top: 1px solid #bdd2b0;
+  border-bottom: 2px solid #425517;
 }
 
 #banner table {
@@ -49,13 +49,14 @@ a:hover {
 #banner-image {
   width: 120px;
   height: 90px;
-  border: 2px solid #173b55;
+  border: 5px ridge #1f5517;
   background: #ffffff;
+  float: right;
 }
 
 #site-title {
   margin: 0;
-  padding: 0 0 4px 14px;
+  padding: 0 0 3px 14px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 34px;
   line-height: 1;
@@ -64,28 +65,25 @@ a:hover {
 
 #tagline {
   padding-left: 16px;
-  color: #16374f;
+  color: #102f0f;
   font-size: 12px;
   font-weight: bold;
 }
 
 #nav {
-  background: #244f6d;
+  background: #456d24;
   border-top: 1px solid #ffffff;
-  border-bottom: 2px solid #173b55;
+  border-bottom: 2px solid #225517;
   padding: 5px;
   text-align: center;
 }
 
 #nav a {
   margin: 0 3px;
-  padding: 4px 12px;
-  background: #dcefff;
-  border-top: 2px solid #ffffff;
-  border-left: 2px solid #ffffff;
-  border-right: 2px solid #173b55;
-  border-bottom: 2px solid #173b55;
-  color: #173b55;
+  padding: 3px 10px;
+  background: #9aaf88;
+  border: 3px ridge #1f5517;
+  color: #3e453e;
   text-decoration: none;
   font-size: 11px;
 }
@@ -104,20 +102,20 @@ a:hover {
 
 .panel {
   margin-bottom: 10px;
-  background: #f4fbff;
+  background: #f5fff4;
   border-top: 2px solid #ffffff;
   border-left: 2px solid #ffffff;
-  border-right: 2px solid #7c9ab0;
-  border-bottom: 2px solid #7c9ab0;
+  border-right: 2px solid #8ab07c;
+  border-bottom: 2px solid #8ab07c;
 }
 
 .panel-title {
   margin: 0;
   padding: 5px 8px;
-  background: #315f80;
+  background: #456d24;
   color: #ffffff;
   font-size: 13px;
-  border-bottom: 1px solid #173b55;
+  border-bottom: 2px solid #225517;
 }
 
 .panel-body {
@@ -194,12 +192,12 @@ a:hover {
   text-align: center;
   vertical-align: top;
   font-size: 10px;
-  color: #315f80;
+  color: #254c1f;
 }
 
 .screens img {
   width: 225px;
-  border: 2px solid #173b55;
+  border: 5px ridge #1f5517;
   background: #ffffff;
   padding: 2px;
 }
@@ -213,13 +211,13 @@ a:hover {
 .control-table th,
 .control-table td {
   padding: 5px;
-  border: 1px solid #9cb8cc;
+  border: 1px solid #a2cc9c;
   text-align: left;
 }
 
 .control-table th {
-  background: #d0e9fa;
-  color: #173b55;
+  background: #e5fad0;
+  color: #305517;
 }
 
 .roadmap-list {
@@ -232,7 +230,7 @@ a:hover {
   margin-bottom: 6px;
   padding: 6px;
   background: #ffffff;
-  border: 1px solid #9cb8cc;
+  border: 1px solid #9ccca6;
 }
 
 .roadmap-meta {
@@ -244,7 +242,7 @@ a:hover {
 
 .footer {
   padding: 8px;
-  background: #122d43;
+  background: #284312;
   color: #d8efff;
   text-align: center;
   font-size: 10px;
