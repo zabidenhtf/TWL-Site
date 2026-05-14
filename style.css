@@ -89,6 +89,14 @@ a:hover {
   font-size: 11px;
 }
 
+#team {
+  font-size: 14px;
+}
+
+#team li {
+  margin-bottom: 32px;
+}
+
 #content {
   padding: 10px;
 }
